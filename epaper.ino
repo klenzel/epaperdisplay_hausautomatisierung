@@ -42,7 +42,7 @@ const char* mqttUser = "BENUTZERNAME_FUER_MQTT";
 const char* mqttPassword = "PASSWORT_FUER_MQTT";
 
 const char* mqttTopic_RaumTempIST = "Buero/Loxone/RaumTempIST";
-const char* mqttTopic_RaumHum = "Buero/Loxone/RaumHum";
+const char* mqttTopic_RaumTempSOLL = "Buero/Loxone/RaumTempSOLL";
 const char* mqttTopic_RaumHum = "Buero/Loxone/RaumHum";
 
 
