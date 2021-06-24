@@ -1,7 +1,9 @@
 #include <GxEPD.h>
-#include <GxGDEP015OC1/GxGDEP015OC1.h>
 #include <GxIO/GxIO_SPI/GxIO_SPI.h>
 #include <GxIO/GxIO.h>
+
+#include <GxGDEP015OC1/GxGDEP015OC1.h>			//uncomment for epaper-displays version <2
+//#include <GxGDEH0154D67/GxGDEH0154D67.h>		//uncomment for epaper-displays version >=2
 
 
 #include <ESP8266WiFi.h>
@@ -12,8 +14,13 @@
 #include <ESP8266HTTPUpdateServer.h>
 
 
-GxIO_Class io(SPI, SS/* CS */,  D3/* DC */,  D4/* RST */);
-GxEPD_Class display(io);
+GxIO_Class io(SPI, SS/* CS */,  D3/* DC */,  D4/* RST */);		//uncomment for epaper-displays version <2
+GxEPD_Class display(io);										                  //uncomment for epaper-displays version <2
+
+//GxIO_Class io(SPI, SS/* CS */, D2/* DC */, D0/* RST */);		//uncomment for epaper-displays version >=2
+//GxEPD_Class display(io, D0, D1);							            	//uncomment for epaper-displays version >=2
+
+
 
 //Schriftarten einbinden
 #include <Adafruit_GFX.h>
